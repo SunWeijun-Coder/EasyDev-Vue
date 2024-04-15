@@ -1,0 +1,11 @@
+#项目相关配置
+EasyDev:
+  #项目名
+  name: EasyDev
+  #项目版本
+  version: 1.0.0
+
+#开发环境配置
+spring:
+  profiles:
+    active: dev
