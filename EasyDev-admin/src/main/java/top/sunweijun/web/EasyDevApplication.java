@@ -1,6 +1,17 @@
-package top.sunweijun.web;/**
+package top.sunweijun.web;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
  * @author sunweijun
  * @date 2024/4/15
  * @apiNote
- */public class EasyDevApplication {
+ */
+@SpringBootApplication
+public class EasyDevApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootApplication.class, args);
+    }
+
 }
