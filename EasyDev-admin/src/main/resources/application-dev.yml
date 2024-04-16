@@ -1,5 +1,5 @@
 server:
-  address: 8080
+  port: 8888
 
 # todo 后期改用 druid 进行改造
 spring:
