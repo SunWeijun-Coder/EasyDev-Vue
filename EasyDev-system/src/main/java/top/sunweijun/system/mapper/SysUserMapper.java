@@ -1,6 +1,8 @@
 package top.sunweijun.system.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import top.sunweijun.system.domain.entity.SysUser;
 
 /**
  * @BelongsProject: EasyDev-Vue
@@ -12,4 +14,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface SysUserMapper {
+    public int insertUser(@Param("user") SysUser user);
 }

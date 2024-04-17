@@ -1,9 +1,15 @@
 package top.sunweijun.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.sunweijun.system.domain.entity.SysUser;
+import top.sunweijun.system.service.SysUserService;
 import top.sunweijun.web.bean.AjaxResult;
+
+import javax.annotation.Resource;
 
 /**
  * @BelongsProject: EasyDev-Vue
@@ -15,10 +21,13 @@ import top.sunweijun.web.bean.AjaxResult;
  */
 @RestController
 @RequestMapping("/system/user")
-public class SysUserController {
+public class SysUserController extends BaseController{
+    @Resource
+    private SysUserService sysUserService;
 
 
-    public AjaxResult add(SysUser user){
-
+    @PostMapping("/add")
+    public AjaxResult add(@RequestBody SysUser user){
+         return toAjax(sysUserService.insertUser(user));
     }
 }

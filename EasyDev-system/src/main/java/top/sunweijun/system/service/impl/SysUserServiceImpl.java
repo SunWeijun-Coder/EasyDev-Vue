@@ -2,7 +2,11 @@ package top.sunweijun.system.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import top.sunweijun.system.domain.entity.SysUser;
+import top.sunweijun.system.mapper.SysUserMapper;
 import top.sunweijun.system.service.SysUserService;
+
+import javax.annotation.Resource;
 
 /**
  * @BelongsProject: EasyDev-Vue
@@ -15,4 +19,12 @@ import top.sunweijun.system.service.SysUserService;
 @Service
 @Slf4j
 public class SysUserServiceImpl implements SysUserService {
+    @Resource()
+    private SysUserMapper userMapper;
+
+    @Override
+    public int insertUser(SysUser user) {
+        // 新增用户信息
+        userMapper.insertUser(user);
+    }
 }
