@@ -1,5 +1,6 @@
 package top.sunweijun.system.domain.entity;
 
+import lombok.Data;
 import top.sunweijun.system.domain.base.BaseEntity;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
  * @date 2024/4/15
  * @apiNote 部门表 sys_dept
  */
+@Data
 public class SysDept extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
