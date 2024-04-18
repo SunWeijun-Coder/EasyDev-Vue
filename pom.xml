@@ -8,6 +8,11 @@
     <packaging>pom</packaging>
     <name>EasyDev-Vue</name>
     <description>EasyDev-Vue</description>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.13</version> <!-- 这里是你要使用的 Spring Boot 版本 -->
+    </parent>
     <modules>
         <module>EasyDev-admin</module>
         <module>EasyDev-system</module>
@@ -17,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.6.13</spring-boot.version>
-        <mybatis.version>3.5.6</mybatis.version>
+        <mybatis-spring-boot-starter-version>2.3.0</mybatis-spring-boot-starter-version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
     </properties>
 
@@ -28,25 +33,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- mybatis -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>${mybatis.version}</version>
-        </dependency>
 
     </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-                <exclusions>
-                    <!-- 可选的排除依赖项 -->
-                </exclusions>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter-version}</version>
             </dependency>
 
             <dependency>

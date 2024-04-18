@@ -23,13 +23,10 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-        </dependency>
+        <!-- 接口层和通用模块层，后续选择是否将模块拆分-->
         <dependency>
             <groupId>top.sunweijun</groupId>
             <artifactId>EasyDev-admin</artifactId>
